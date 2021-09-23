@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgb(235, 235, 235);
+    background-color: #000;
+}
+
+*,
+*:before,
+*:after
+ {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+    /* выравниваем по центруб блоки располагаются вертикально*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg1.jpeg") center no-repeat;
+    background-size: cover;
+}
+
+.intro_inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto; /* выравниваем по центру*/
+}
+
+.intro_title {
+    color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
+.intro_subtitle {
+    font-weight: lighter;
+    font-size: 32px;
+    color: #c7c7c7;
+    text-align: center;
+}
+/* Header */
+.header {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* выровнить по центру*/
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight:  700; /* bold */
+    color: #fff;
+}
+
+/* Navigation */
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s linear;
+}
+
+.nav_link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+
+    background-color: #fc8003;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.nav_link:hover {
+    color: #fc8003;
+}
+
+.nav_link:hover:after{
+    display: block;
+}
+
+/* Main */
+.main {
+    /* выравниваем по центруб блоки располагаются вертикально*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_title {
+    color: #fc8003;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1;
+    margin-top: 30px;
+}
+
+.main_description {
+    font-size: 24px;
+    color: #fc8003;
+    text-align: left;
+}
+
+.main_subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid rgb(59, 59, 59);
+}
+/* Images */
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.frame {
+    width: 300px;
+    height: 250px;
+    background: #fc8003;
+    margin: auto;
+    padding: 15px 10px;
+  }
+.image-grid-col-2 {
+    grid-column: span 2;
+
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+    
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+input {
+    background-color: rgb(19, 19, 19);
+    border-color: #fc8003;
+    border: 1;
+    color: #fc8003;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+p {
+    text-indent: 20px;
+}
+
+ul {
+    list-style: none; 
+  }
+  
+  ul li::before {
+    content: "\2022";  
+    color: #fc8003; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
