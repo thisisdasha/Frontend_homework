@@ -1,0 +1,12 @@
+<h1>
+    Ингредиенты:🥕🥑🥬
+</h1>
+<h2>
+    {{recipe.name}}
+    <button (click)="addToShoppingList()">Добавить в список покупок</button>
+</h2>
+<ul>
+    <li *ngFor="let ingredient of recipe.ingredients">
+        {{ingredient.name}}: {{ingredient.quantity}} шт
+    </li>
+</ul>
