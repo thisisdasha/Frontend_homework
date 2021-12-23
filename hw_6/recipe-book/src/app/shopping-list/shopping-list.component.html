@@ -1,0 +1,10 @@
+<h1>Список покупок</h1>
+<button (click)="addSecretIngredient()">Добавить продукты</button>
+<ul>
+    <li *ngFor="let ingredient of ingredients">
+        {{ingredient.name}}: {{ingredient.quantity}} шт
+        <button (click)="increaseQuantity(ingredient)">+1</button>
+        <button (click)="decreaseQuantity(ingredient)">-1</button>
+        <button (click)="remove(ingredient)">Удалить</button>
+    </li>
+</ul>
